@@ -1,10 +1,13 @@
 import React from "react";
 import { Icon } from '@iconify/react';
+import ThemeContext from "../context/ThemeContext";
+import { useContext } from "react";
 
 function ThemeBtn() {
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   return (
     <div
-      className={`change-theme flex flex-col items-center overflow-hidden ${
+      className={`change-theme flex flex-col items-center overflow-hidden w-32 ${
         darkMode ? " text-white" : " text-black"
       }`}
     >
