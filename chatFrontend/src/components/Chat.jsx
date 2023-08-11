@@ -38,24 +38,26 @@ function Chat() {
     setMessages((state) => [...state, message]);
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Write your message..."
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <button>Send</button>
-      </form>
+    <div className="Chat w-full">
+      <div className="container mx-auto h-full">
+        {/* Message list */}
+        <ul>
+          {messages.map((message, index) => (
+            <li key={index}>
+              {message.from} : {message.body}
+            </li>
+          ))}
+        </ul>
 
-      {/* Message list */}
-      <ul>
-        {messages.map((message, index) => (
-          <li key={index}>
-            {message.from} : {message.body}
-          </li>
-        ))}
-      </ul>
+        <form onSubmit={handleSubmit} className="message-form text-center">
+          <input
+            type="text"
+            placeholder="Write your message..."
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <button>Send</button>
+        </form>
+      </div>
     </div>
   );
 }
