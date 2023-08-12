@@ -21,12 +21,12 @@ function ThemeBtn() {
         htmlFor="checkbox"
         className="theme-lbl w-24 h-10 rounded-full relative pt-2 pb-3 px-3 flex justify-between items-center"
       >
-        <Icon icon="ph:sun-fill" style={{ fontSize: "30px", color: "white" }} />
+        <Icon icon="ph:sun-fill" style={{ fontSize: "30px", color: "#3772FF" }} />
         <Icon
           icon="solar:moon-stars-bold"
-          style={{ fontSize: "25px", color: "black" }}
+          style={{ fontSize: "25px", color: "#3772FF" }}
         />
-        <span className={"ball bg-black w-8 h-8 absolute rounded-full"}></span>
+        <span className={"ball w-8 h-8 absolute rounded-full"}></span>
       </label>
     </div>
   );

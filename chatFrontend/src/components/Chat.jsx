@@ -38,24 +38,36 @@ function Chat() {
     setMessages((state) => [...state, message]);
 
   return (
-    <div className="Chat w-full">
-      <div className="container mx-auto h-full">
+    <div className="Chat w-full h-full">
+      <div className="container mx-auto h-full flex-col items-center py-10">
         {/* Message list */}
-        <ul>
-          {messages.map((message, index) => (
-            <li key={index}>
-              {message.from} : {message.body}
-            </li>
-          ))}
-        </ul>
+        <div className="messages w-full h-4/5 overflow-y-scroll p-4">
+          <ul>
+            {messages.map((message, i) => (
+              <li
+                key={i}
+                className={`text message p-3 rounded-lg text-white w-3/5 my-2 ${
+                  message.from === "Me" ? "bg-[#CC2936] ml-auto" : "bg-black"
+                }`}
+              >
+                <p className="smallText italic font-semibold">{message.from}</p>
+                <p className="text font-medium">{message.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <form onSubmit={handleSubmit} className="message-form text-center">
+        <form
+          onSubmit={handleSubmit}
+          className="message-form flex items-center justify-between text-cente pb-1"
+        >
           <input
+            className="text w-full py-1"
             type="text"
             placeholder="Write your message..."
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button>Send</button>
+          <button className="smallText send-btn">Send</button>
         </form>
       </div>
     </div>
