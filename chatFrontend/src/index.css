@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-* COLORS:
- buttons: #3772FF 
- Titles: #14FFF7
- Darkmode: #000000
- User messages: #CC2936
-
- Font: Work Sans
-
-*/
-
 h1,
 h2,
 p,
@@ -29,31 +18,14 @@ p {
   font-size: 20px;
 }
 
-.title {
-  font-size: 40px;
-}
-.subtitle {
-  font-size: 35px;
-}
-.text {
-  font-size: 20px;
-}
-.smallText {
-  font-size: 18px;
-}
-
-/* .mb-title{ font-size: 24px;}
-.mb-subtitle{ font-size: 20px;}
-.mb-text{ font-size: 16px;}
-.mb-smallText{ font-size: 14px;} */
-
 .App {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
 
-.ball {
+.ball,
+.mb-ball {
   background-color: white;
   -webkit-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 1);
@@ -61,12 +33,12 @@ p {
 }
 
 .ball-darkMode {
-  -webkit-box-shadow: 0px 0px 7px -2px rgba(255, 255, 255,1);
-  -moz-box-shadow: 0px 0px 7px -2px rgba(255, 255, 255,1);
-  box-shadow: 0px 0px 7px -2px rgba(255, 255, 255,1);
+  -webkit-box-shadow: 0px 0px 7px -2px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 7px -2px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 7px -2px rgba(255, 255, 255, 1);
 }
 
-.chat .container{
+.chat .container {
   height: 692px !important;
 }
 
@@ -78,7 +50,7 @@ p {
   color: black;
 }
 
-.menu{
+.menu {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
 }
@@ -87,23 +59,54 @@ p {
   border-bottom: 1px solid black;
 }
 
+.option-menu {
+  width: 100%;
+  text-align: center;
+}
+
+.option-menu:active {
+  background-color: #3772ff;
+}
+
 .send-btn {
+  width: 90px;
   background-color: #3772ff;
   color: white;
   font-weight: 500;
-  padding: 5px 20px;
-  border-radius: 20px;
+  padding: 5px 10px;
+  border-radius: 10px 10px;
 }
 
-.theme-lbl {
+.smallText {
+  font-size: 18px;
+}
+
+.subtitle {
+  font-size: 35px;
+}
+
+.text {
+  font-size: 20px;
+}
+
+.theme-lbl,
+.mb-theme-lbl {
   cursor: pointer;
 }
-.theme-lbl .ball {
+
+.theme-lbl .ball,
+.mb-theme-lbl .mb-ball {
   transition: transform 0.4s ease-out;
 }
-.theme-btn:checked + .theme-lbl .ball {
+
+.theme-btn:checked + .theme-lbl .ball,
+.mb-theme-btn:checked + .mb-theme-lbl .mb-ball {
   transform: translateX(40px);
   background-color: #fff;
+}
+
+.title {
+  font-size: 40px;
 }
 
 ::-webkit-scrollbar {
@@ -115,4 +118,71 @@ p {
 ::-webkit-scrollbar-thumb {
   background-color: #9e0031;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  * {
+    word-break: break-all;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app-links {
+    padding-bottom: 20px !important;
+  }
+
+  .change-theme {
+    display: none;
+    width: 0px;
+  }
+
+  .container {
+    padding: 0px 8px;
+  }
+
+  .description {
+    padding-bottom: 20px;
+  }
+
+  .description p {
+    text-align: center;
+  }
+
+  .header .container {
+    flex-direction: row-reverse;
+  }
+  /*flex flex-col items-center*/
+  .mb-change-theme {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .messages {
+    padding: 0px 4px;
+  }
+
+  .message {
+    padding: 8px !important;
+  }
+
+  .smallText {
+    font-size: 14px;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .title-container {
+    text-align: center;
+  }
+
+  .text {
+    font-size: 16px;
+  }
 }

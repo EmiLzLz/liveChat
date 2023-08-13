@@ -10,11 +10,11 @@ function Header() {
     setShowMenu(!showMenu);
   }
   return (
-    <div className="w-full py-5 relative">
+    <div className="header w-full py-5">
       <div className="container flex items-center justify-between mx-auto">
         <button onClick={toggleMenu}><Icon icon="gg:menu-left" style={{ fontSize: "30px", color: "#3772FF" }} /></button>
         <h1 className="title text-[#14FFF7]">LIVE CHAT</h1>
-        <ThemeBtn />
+        <ThemeBtn/>
       </div>
       {showMenu && <Menu/>}
     </div>

@@ -46,7 +46,7 @@ function Chat() {
             {messages.map((message, i) => (
               <li
                 key={i}
-                className={`text message p-3 rounded-lg text-white w-3/5 my-2 overflow-x-auto break-words ${
+                className={`text message p-3 rounded-lg text-white w-full md:w-3/5 my-2 overflow-x-auto break-words ${
                   message.from === "Me" ? "bg-[#CC2936] ml-auto" : "bg-black"
                 }`}
               >
