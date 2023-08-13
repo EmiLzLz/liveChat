@@ -4,9 +4,9 @@ import { Icon } from "@iconify/react";
 function Footer() {
   return (
     <div className="Footer w-full py-8 bg-black text-white">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <p className="text">Made by: Emiliano Lopez</p>
-        <div className="social-links flex items-center gap-4">
+        <div className="social-links flex items-center gap-4 pt-8 md:pt-0">
           <div className="linkedin-link flex items-center gap-1">
             <Icon
               icon="bi:linkedin"

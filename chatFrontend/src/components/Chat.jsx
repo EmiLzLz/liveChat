@@ -38,15 +38,15 @@ function Chat() {
     setMessages((state) => [...state, message]);
 
   return (
-    <div className="Chat w-full h-full">
-      <div className="container mx-auto h-full flex-col items-center py-10">
+    <div className="chat w-full py-8">
+      <div className="container mx-auto flex flex-col items-center justify-between ">
         {/* Message list */}
         <div className="messages w-full h-4/5 overflow-y-scroll p-4">
           <ul>
             {messages.map((message, i) => (
               <li
                 key={i}
-                className={`text message p-3 rounded-lg text-white w-3/5 my-2 ${
+                className={`text message p-3 rounded-lg text-white w-3/5 my-2 overflow-x-auto break-words ${
                   message.from === "Me" ? "bg-[#CC2936] ml-auto" : "bg-black"
                 }`}
               >
@@ -59,7 +59,7 @@ function Chat() {
 
         <form
           onSubmit={handleSubmit}
-          className="message-form flex items-center justify-between text-cente pb-1"
+          className="message-form w-full flex items-center justify-between text-cente pt-4 pb-2"
         >
           <input
             className="text w-full py-1"

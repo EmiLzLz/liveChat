@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Menu() {
   return (
-    <div className='absolute h-full bg-black w-60 flex flex-col items-center left-48'>
+    <div className='menu absolute w-full h-56 flex flex-col items-center'>
         <Link className='text option-menu text-white py-2' to={"/"}>Chat</Link>
         <Link className='text option-menu text-white py-2' to={"/about"}>About</Link>
     </div>

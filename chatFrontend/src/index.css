@@ -66,12 +66,21 @@ p {
   box-shadow: 0px 0px 7px -2px rgba(255, 255, 255,1);
 }
 
+.chat .container{
+  height: 692px !important;
+}
+
 .darkMode {
   color: white;
 }
 
 .lightMode {
   color: black;
+}
+
+.menu{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
 }
 
 .message-form {
@@ -83,5 +92,27 @@ p {
   color: white;
   font-weight: 500;
   padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.theme-lbl {
+  cursor: pointer;
+}
+.theme-lbl .ball {
+  transition: transform 0.4s ease-out;
+}
+.theme-btn:checked + .theme-lbl .ball {
+  transform: translateX(40px);
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9e0031;
   border-radius: 20px;
 }

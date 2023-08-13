@@ -7,8 +7,8 @@ function About() {
       <div className="container mx-auto h-full flex flex-col justify-center">
         <div className="description pb-10">
           <div className="title pb-4">
-            <h2 className="subtitle font-bold">ABOUT</h2>
-            <h2 className="subtitle font-bold">THE APP</h2>
+            <h2 className="subtitle font-bold text-[#14FFF7]">ABOUT</h2>
+            <h2 className="subtitle font-bold text-[#14FFF7]">THE APP</h2>
           </div>
           <p className="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
@@ -17,7 +17,7 @@ function About() {
             mollitia natus, sequi deserunt.
           </p>
         </div>
-        <div className="app-links flex items-center gap-12 pt-10">
+        <div className="app-links flex items-center justify-around w-full gap-12 pt-10">
           <div className="figma-link flex flex-col gap-6 items-center">
             <Icon
               icon="logos:figma"
