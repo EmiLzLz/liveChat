@@ -22,12 +22,15 @@ function About() {
         </div>
         <div className="app-links flex flex-col md:flex-row items-center justify-around w-full gap-12 pt-10">
           <div className="figma-link flex flex-col gap-6 items-center">
-            <Icon
-              icon="logos:figma"
-              style={{ fontSize: "60px" }}
-            />
+            <Icon icon="logos:figma" style={{ fontSize: "60px" }} />
             {/* AGREGAR LINKS */}
-            <a className={`text-black ${darkMode && "text-white"}`} href="#">Go to the Figma file</a>
+            <a
+              className={`text-black ${darkMode && "text-white"}`}
+              href="https://www.figma.com/file/8xLtSah6LDtZBMSyVWNSnZ/Chat_App?type=design&mode=design&t=Vsc3j5HMqeiVscmq-1"
+              target="_blank"
+            >
+              Go to the Figma file
+            </a>
           </div>
           <div className="githubApp-link flex flex-col gap-6 items-center">
             <Icon
@@ -35,7 +38,13 @@ function About() {
               icon="mdi:github"
               style={{ fontSize: "60px" }}
             />
-            <a className={`text-black ${darkMode && "text-white"}`} href="https://github.com/EmiLzLz/liveChat">Check the code</a>
+            <a
+              className={`text-black ${darkMode && "text-white"}`}
+              href="https://github.com/EmiLzLz/liveChat"
+              target="_blank"
+            >
+              Check the code
+            </a>
           </div>
         </div>
       </div>
