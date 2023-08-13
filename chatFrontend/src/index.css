@@ -33,9 +33,9 @@ p {
 }
 
 .ball-darkMode {
-  -webkit-box-shadow: 0px 0px 7px -2px rgba(255, 255, 255, 1);
-  -moz-box-shadow: 0px 0px 7px -2px rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 7px -2px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 0px 17px -2px rgb(253, 253, 253) !important;
+  -moz-box-shadow: 0px 0px 17px -2px rgb(255, 255, 255) !important;
+  box-shadow: 0px 0px 17px -2px rgb(255, 255, 255) !important;
 }
 
 .chat .container {
@@ -43,29 +43,42 @@ p {
 }
 
 .darkMode {
-  color: white;
+  color: black;
 }
 
 .lightMode {
   color: black;
 }
 
-.menu {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+.menu-btn{
+  transition: scale .4s ease;
+}
+
+.menu-btn:active{
+  scale: 0.9;
 }
 
 .message-form {
   border-bottom: 1px solid black;
 }
 
+.message-form-dark{
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
 .option-menu {
   width: 100%;
   text-align: center;
+  transition: background-color, color .2s ease-in;
+}
+
+.option-menu:hover{
+  background-color: #3772ff;
+  color: white;
 }
 
 .option-menu:active {
-  background-color: #3772ff;
+  background-color: #4980ff;
 }
 
 .send-btn {
@@ -75,6 +88,15 @@ p {
   font-weight: 500;
   padding: 5px 10px;
   border-radius: 10px 10px;
+  transition: background-color, scale .1s ease-in;
+}
+
+.send-btn:hover{
+  background-color: #4980ff;
+}
+
+.send-btn:active{
+  scale: 0.9;
 }
 
 .smallText {

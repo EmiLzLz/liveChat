@@ -26,7 +26,7 @@ function ThemeBtn() {
           icon="solar:moon-stars-bold"
           style={{ fontSize: "25px", color: "#3772FF" }}
         />
-        <span className={"ball w-8 h-8 absolute rounded-full"}></span>
+        <span className={`ball w-8 h-8 absolute rounded-full ${darkMode && "ball-darkMode"}`}></span>
       </label>
     </div>
   );

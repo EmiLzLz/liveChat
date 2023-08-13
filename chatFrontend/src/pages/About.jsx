@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Icon } from "@iconify/react";
+import ThemeContext from "../context/ThemeContext";
 
 function About() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
-    <div className="aboutApp">
+    <div className={`aboutApp ${darkMode && "bg-black"}`}>
       <div className="container mx-auto h-full flex flex-col justify-center">
         <div className="description pb-10">
           <div className="title-container pb-4">
             <h2 className="subtitle font-bold text-[#14FFF7]">ABOUT</h2>
             <h2 className="subtitle font-bold text-[#14FFF7]">THE APP</h2>
           </div>
-          <p className="text">
+          <p className={`text ${darkMode && "text-white"}`}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
             aliquam inventore, numquam ullam facere adipisci error molestiae, ad
             voluptates accusantium saepe at perspiciatis incidunt porro rem
@@ -24,14 +27,15 @@ function About() {
               style={{ fontSize: "60px" }}
             />
             {/* AGREGAR LINKS */}
-            <a href="#">Go to the Figma file</a>
+            <a className={`text-black ${darkMode && "text-white"}`} href="#">Go to the Figma file</a>
           </div>
           <div className="githubApp-link flex flex-col gap-6 items-center">
             <Icon
+              className={`text-black ${darkMode && "text-white"}`}
               icon="mdi:github"
-              style={{ fontSize: "60px", color: "black" }}
+              style={{ fontSize: "60px" }}
             />
-            <a href="#">Check the code</a>
+            <a className={`text-black ${darkMode && "text-white"}`} href="https://github.com/EmiLzLz/liveChat">Check the code</a>
           </div>
         </div>
       </div>

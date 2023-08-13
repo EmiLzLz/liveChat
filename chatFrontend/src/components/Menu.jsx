@@ -1,17 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 import ThemeContext from "../context/ThemeContext";
 import { useContext } from "react";
 
 function Menu() {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+
   return (
-    <div className="menu absolute w-full h-48 flex flex-col items-center">
-      <Link className="text option-menu text-white py-2" to={"/"}>
+    <div
+      className={`menu overflow-hidden bg-black absolute w-4/5 h-48 flex flex-col items-center mx-auto left-0 right-0 rounded-lg ${
+        darkMode && "bg-white"
+      }`}
+    >
+      <Link
+        className={`text option-menu text-white py-2 ${darkMode && "darkMode"}`}
+        to={"/"}
+      >
         Chat
       </Link>
-      <Link className="text option-menu text-white py-2" to={"/about"}>
+      <Link
+        className={`text option-menu text-white py-2 ${darkMode && "darkMode"}`}
+        to={"/about"}
+      >
         About
       </Link>
       <div

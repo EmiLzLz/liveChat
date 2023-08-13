@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import io from "socket.io-client";
 import { useState, useEffect } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 //* backend connection
 const socket = io("/");
 
 function Chat() {
+  const { darkMode } = useContext(ThemeContext);
   // state for user message
   const [message, setMessage] = useState("");
   // state for all messages
@@ -38,7 +40,7 @@ function Chat() {
     setMessages((state) => [...state, message]);
 
   return (
-    <div className="chat w-full py-8">
+    <div className={`chat w-full py-8 ${darkMode && "bg-black"}`}>
       <div className="container mx-auto flex flex-col items-center justify-between ">
         {/* Message list */}
         <div className="messages w-full h-4/5 overflow-y-scroll p-4">
@@ -46,8 +48,8 @@ function Chat() {
             {messages.map((message, i) => (
               <li
                 key={i}
-                className={`text message p-3 rounded-lg text-white w-full md:w-3/5 my-2 overflow-x-auto break-words ${
-                  message.from === "Me" ? "bg-[#CC2936] ml-auto" : "bg-black"
+                className={`text message p-3 rounded-lg text-white w-full md:w-3/5 my-2 overflow-x-auto break-words ${        
+                  message.from === "Me" ? "bg-[#CC2936] ml-auto" : "bg-[#2A0C4E]"
                 }`}
               >
                 <p className="smallText italic font-semibold">{message.from}</p>
@@ -59,10 +61,10 @@ function Chat() {
 
         <form
           onSubmit={handleSubmit}
-          className="message-form w-full flex items-center justify-between text-cente pt-4 pb-2"
+          className={`message-form w-full flex items-center justify-between text-cente pt-4 pb-2 ${darkMode && "message-form-dark"}`}
         >
           <input
-            className="text w-full py-1"
+            className={`text w-full py-1 ${darkMode && "bg-black text-white"}`}
             type="text"
             placeholder="Write your message..."
             onChange={(e) => setMessage(e.target.value)}
