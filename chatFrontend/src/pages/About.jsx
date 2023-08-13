@@ -23,6 +23,7 @@ function About() {
               icon="logos:figma"
               style={{ fontSize: "60px" }}
             />
+            {/* AGREGAR LINKS */}
             <a href="#">Go to the Figma file</a>
           </div>
           <div className="githubApp-link flex flex-col gap-6 items-center">

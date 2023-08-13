@@ -27,7 +27,7 @@ function Chat() {
   useEffect(() => {
     socket.on("message", receiveMessage);
 
-    // aif we refresh or we change the tab, then socket event turns off
+    // if we refresh or we change the tab, then socket event turns off
     return () => {
       socket.off("message", receiveMessage);
     };

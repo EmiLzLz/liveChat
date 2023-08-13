@@ -12,6 +12,7 @@ function Footer() {
               icon="bi:linkedin"
               style={{ fontSize: "30px", color: "#3772FF" }}
             />
+            {/* AGREGAR LINKS */}
             <a className="smallText" href="#">LinkedIn</a>
           </div>
           <div className="gitub-link flex items-center gap-1">

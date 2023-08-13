@@ -14,6 +14,8 @@ io.on("connection", socket => {
 
     // Comes from Frontend
     socket.on("message", (body) => {
+        //store messages in db
+        
         // Send message and author from backend
         socket.broadcast.emit("message", {
             body,
