@@ -14,16 +14,15 @@ function About() {
             <h2 className="subtitle font-bold text-[#14FFF7]">THE APP</h2>
           </div>
           <p className={`text ${darkMode && "text-white"}`}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-            aliquam inventore, numquam ullam facere adipisci error molestiae, ad
-            voluptates accusantium saepe at perspiciatis incidunt porro rem
-            mollitia natus, sequi deserunt.
+            This chat was created using React and Socket.io. In addition, I added
+            this about section using React Router and Tailwind CSS for
+            styling.You may view the figma file where I created the app's
+            wireframes and mockups if you'd like.
           </p>
         </div>
         <div className="app-links flex flex-col md:flex-row items-center justify-around w-full gap-12 pt-10">
           <div className="figma-link flex flex-col gap-6 items-center">
             <Icon icon="logos:figma" style={{ fontSize: "60px" }} />
-            {/* AGREGAR LINKS */}
             <a
               className={`text-black ${darkMode && "text-white"}`}
               href="https://www.figma.com/file/8xLtSah6LDtZBMSyVWNSnZ/Chat_App?type=design&mode=design&t=Vsc3j5HMqeiVscmq-1"

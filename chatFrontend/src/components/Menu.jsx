@@ -38,7 +38,7 @@ function Menu() {
         />
         <label
           htmlFor="checkbox"
-          className="mb-theme-lbl w-24 h-10 rounded-full relative pt-2 pb-3 px-3 flex justify-between items-center"
+          className={`mb-theme-lbl w-24 h-10 rounded-full relative pt-3 pb-3 px-3 flex justify-between items-center bg-black ${darkMode && "bg-white"}`}
         >
           <Icon
             icon="ph:sun-fill"
