@@ -24,6 +24,9 @@ function Chat() {
     setMessages([...messages, newMessage]);
     // send to backend
     socket.emit("message", message);
+
+    // Reset the input
+    setMessage(""); 
   };
 
   useEffect(() => {
@@ -67,6 +70,7 @@ function Chat() {
             className={`text w-full py-1 ${darkMode && "bg-black text-white"}`}
             type="text"
             placeholder="Write your message..."
+            value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
           <button className="smallText send-btn">Send</button>
